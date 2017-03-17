@@ -1,0 +1,1170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+  dslVersion="1.0.0.0"
+  Id="247d6bef-0fd7-4433-980e-9c7b7bbac68a"
+  name="SuperRocket.Orchard.Architecture" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction
+        Id="dbde4062-025d-4591-b032-b737001bed07"
+        name="SharePointSync"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <ownedCommentsInternal>
+          <comment
+            Id="ccc5262b-690e-40e9-bbc9-acf9034775ff">
+            <body>SharePointSyncJob Enqueued</body>
+            <annotatedElements>
+              <behaviorExecutionSpecificationMoniker
+                Id="ee9441e9-f998-401c-beb4-524357a41c34"
+                LastKnownName="BehaviorExecutionSpecification1"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </annotatedElements>
+          </comment>
+          <comment
+            Id="1c9a7527-d9c1-4201-a80d-33aca4c40530">
+            <body>AwsS3 job will be executed to upload file to aws s3.</body>
+            <annotatedElements>
+              <behaviorExecutionSpecificationMoniker
+                Id="aaab38b0-9937-4f50-b1a3-e7fc64bd25a4"
+                LastKnownName="BehaviorExecutionSpecification5"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </annotatedElements>
+          </comment>
+        </ownedCommentsInternal>
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="ee9441e9-f998-401c-beb4-524357a41c34"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="1ebf01b1-a966-42ce-9d98-ad646e07d54c"
+                LastKnownName="Job Manager"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="b19cc816-3a63-4c7b-bfba-65eed7456d56"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="7414ebd7-fdfa-4c3d-9fe0-e6c1a5d8d9fc"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="9df59e53-4f2f-45c1-80e8-04c9e0d07b1d"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="143a13f8-cec6-497b-af61-44e22ad5f3e7"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="7414ebd7-fdfa-4c3d-9fe0-e6c1a5d8d9fc"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="e39ed14d-ca42-4d23-bc18-56b2d0281699"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1ebf01b1-a966-42ce-9d98-ad646e07d54c"
+                LastKnownName="Job Manager"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="17d466fe-be08-44c2-bdf7-97e46db700e1"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="74f6a4af-1427-496b-a044-471b8420bba4"
+                LastKnownName="SharePointSync Service"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9df59e53-4f2f-45c1-80e8-04c9e0d07b1d"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="1ebf01b1-a966-42ce-9d98-ad646e07d54c"
+                LastKnownName="Job Manager"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="820749b0-2e14-441f-a851-bad8e54a4ba2"
+            name="BehaviorExecutionSpecification12">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="12499195-9da8-43a2-9d9c-35c2d13c759b"
+                LastKnownName="Sync Manager"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="2a003378-6c3a-4780-b454-817cdd1234db"
+                LastKnownName="ExecutionOccurrenceSpecification24"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="5598ff70-ce22-434f-bbff-795e535f080f"
+                LastKnownName="ExecutionOccurrenceSpecification23"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="ee5610cf-464f-4281-a03b-cb40e5c5ae38"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="5598ff70-ce22-434f-bbff-795e535f080f"
+            name="ExecutionOccurrenceSpecification23">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="9213ec13-d9e0-43c5-b425-d91fe368d947"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="12499195-9da8-43a2-9d9c-35c2d13c759b"
+                LastKnownName="Sync Manager"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="143a13f8-cec6-497b-af61-44e22ad5f3e7"
+            name="MessageOccurrenceSpecification27">
+            <covered>
+              <lifelineMoniker
+                Id="1ebf01b1-a966-42ce-9d98-ad646e07d54c"
+                LastKnownName="Job Manager"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ee5610cf-464f-4281-a03b-cb40e5c5ae38"
+            name="MessageOccurrenceSpecification28">
+            <covered>
+              <lifelineMoniker
+                Id="12499195-9da8-43a2-9d9c-35c2d13c759b"
+                LastKnownName="Sync Manager"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e8e31054-32cd-4874-8d03-01d96d116477"
+            name="MessageOccurrenceSpecification23">
+            <covered>
+              <lifelineMoniker
+                Id="d113695e-8b08-4c1e-9c4a-0215150f8121"
+                LastKnownName="SyncServiceFileWatcher"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="2a003378-6c3a-4780-b454-817cdd1234db"
+            name="ExecutionOccurrenceSpecification24">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="49aafc56-62ff-4dd5-a7f1-42e0962e6e24"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="12499195-9da8-43a2-9d9c-35c2d13c759b"
+                LastKnownName="Sync Manager"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="85f7c907-b45c-491b-878b-f5a19ef4ab94"
+            name="BehaviorExecutionSpecification10">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d113695e-8b08-4c1e-9c4a-0215150f8121"
+                LastKnownName="SyncServiceFileWatcher"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="50b3bd5a-a696-4239-92ef-be62f40f84f5"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="fa26d5f4-ce79-4084-870a-05ddfdeebd3a"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="5d5f53e0-aded-4f6d-885f-843df4c2a656"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="d74415be-9613-468d-abd1-68027534f608"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="fa26d5f4-ce79-4084-870a-05ddfdeebd3a"
+            name="ExecutionOccurrenceSpecification19">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="8e49b841-a003-46ba-aa07-899d1b48c64b"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d113695e-8b08-4c1e-9c4a-0215150f8121"
+                LastKnownName="SyncServiceFileWatcher"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="5d5f53e0-aded-4f6d-885f-843df4c2a656"
+            name="MessageOccurrenceSpecification24">
+            <covered>
+              <lifelineMoniker
+                Id="d113695e-8b08-4c1e-9c4a-0215150f8121"
+                LastKnownName="SyncServiceFileWatcher"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="ad86c4f8-aa4c-4c25-bfd3-f7d4bef78909"
+            name="BehaviorExecutionSpecification3">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="cee1ea5a-2735-4bb9-8153-ebb191636f47"
+                LastKnownName="Event Bus"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="2953246d-5e6a-4d1d-b0e8-7c8e4aaf018e"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="4c99634d-1566-40d2-b910-48badaad6d66"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="a01ea3db-a574-4c09-bca7-786a47e3df97"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="3ec13182-0c4f-4560-b13e-08382494f527"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="4c99634d-1566-40d2-b910-48badaad6d66"
+            name="ExecutionOccurrenceSpecification5">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="0f038dd0-640a-4c6b-ab3e-cc2f60d1a23b"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="cee1ea5a-2735-4bb9-8153-ebb191636f47"
+                LastKnownName="Event Bus"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d74415be-9613-468d-abd1-68027534f608"
+            name="MessageOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="d113695e-8b08-4c1e-9c4a-0215150f8121"
+                LastKnownName="SyncServiceFileWatcher"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a01ea3db-a574-4c09-bca7-786a47e3df97"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="cee1ea5a-2735-4bb9-8153-ebb191636f47"
+                LastKnownName="Event Bus"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="0377eab0-ed06-4762-9c83-afb04f3ac5c6"
+            name="BehaviorExecutionSpecification4">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="5cb8a47c-a09e-450d-9e79-665877c37091"
+                LastKnownName="EventHandler"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="f62a9eb2-a359-4587-986e-c82fdfedc518"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="bd098fc8-9e9d-4b21-86cf-c57de64f5ebc"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="464fe5e0-da96-47d5-914c-34b629ab38ec"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e5c3cf73-aa6f-4bd9-ad35-48a76697a4fc"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="dd8df023-d180-4db5-acc9-56d17141ea5e"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="5b0989d5-cdc6-46d7-a74a-2b643b8ea604"
+                LastKnownName="ExecutionOccurrenceSpecification21"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="fa9f415a-4762-495e-b6f7-cc4d5ef41189"
+                LastKnownName="ExecutionOccurrenceSpecification22"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="50b3bd5a-a696-4239-92ef-be62f40f84f5"
+            name="ExecutionOccurrenceSpecification20">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="a2b0a644-98bc-4cb0-ae5f-8e9c00918f39"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d113695e-8b08-4c1e-9c4a-0215150f8121"
+                LastKnownName="SyncServiceFileWatcher"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="bd098fc8-9e9d-4b21-86cf-c57de64f5ebc"
+            name="ExecutionOccurrenceSpecification7">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="8c338129-b685-4638-a7ac-16a6413b9bf9"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="5cb8a47c-a09e-450d-9e79-665877c37091"
+                LastKnownName="EventHandler"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3ec13182-0c4f-4560-b13e-08382494f527"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="cee1ea5a-2735-4bb9-8153-ebb191636f47"
+                LastKnownName="Event Bus"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="464fe5e0-da96-47d5-914c-34b629ab38ec"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="5cb8a47c-a09e-450d-9e79-665877c37091"
+                LastKnownName="EventHandler"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="2953246d-5e6a-4d1d-b0e8-7c8e4aaf018e"
+            name="ExecutionOccurrenceSpecification6">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="6308b649-dddb-4a26-89b1-dccab65d4038"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="cee1ea5a-2735-4bb9-8153-ebb191636f47"
+                LastKnownName="Event Bus"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e5c3cf73-aa6f-4bd9-ad35-48a76697a4fc"
+            name="MessageOccurrenceSpecification25">
+            <covered>
+              <lifelineMoniker
+                Id="5cb8a47c-a09e-450d-9e79-665877c37091"
+                LastKnownName="EventHandler"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="fd2b5161-9e09-4e70-9e3d-3b3362fc1422"
+            name="BehaviorExecutionSpecification11">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="5cb8a47c-a09e-450d-9e79-665877c37091"
+                LastKnownName="EventHandler"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="fa9f415a-4762-495e-b6f7-cc4d5ef41189"
+                LastKnownName="ExecutionOccurrenceSpecification22"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="5b0989d5-cdc6-46d7-a74a-2b643b8ea604"
+                LastKnownName="ExecutionOccurrenceSpecification21"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="35594ec2-5572-4231-9afc-6fc091f7f5f3"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="5b0989d5-cdc6-46d7-a74a-2b643b8ea604"
+            name="ExecutionOccurrenceSpecification21">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="33b3fd6c-dee4-4a9f-871d-1baf8bde5b9e"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="5cb8a47c-a09e-450d-9e79-665877c37091"
+                LastKnownName="EventHandler"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="35594ec2-5572-4231-9afc-6fc091f7f5f3"
+            name="MessageOccurrenceSpecification26">
+            <covered>
+              <lifelineMoniker
+                Id="5cb8a47c-a09e-450d-9e79-665877c37091"
+                LastKnownName="EventHandler"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="b19cc816-3a63-4c7b-bfba-65eed7456d56"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="03c7a6ed-8e79-46b5-bb6e-8b854b9c1670"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1ebf01b1-a966-42ce-9d98-ad646e07d54c"
+                LastKnownName="Job Manager"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="aaab38b0-9937-4f50-b1a3-e7fc64bd25a4"
+            name="BehaviorExecutionSpecification5">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="e0c86295-4720-4767-a57b-2bea10322248"
+                LastKnownName="Job Manager"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="89453f16-7b86-4abc-9e11-af3b5f77b5ab"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="8524e268-1cb6-44ea-b06b-699fcde89d20"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="0891040b-e479-408c-8cbb-680d24ed0f66"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="8524e268-1cb6-44ea-b06b-699fcde89d20"
+            name="ExecutionOccurrenceSpecification9">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="27da79c8-593d-490e-a7b5-a0fc868ae770"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="e0c86295-4720-4767-a57b-2bea10322248"
+                LastKnownName="Job Manager"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0891040b-e479-408c-8cbb-680d24ed0f66"
+            name="MessageOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="e0c86295-4720-4767-a57b-2bea10322248"
+                LastKnownName="Job Manager"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="dd8df023-d180-4db5-acc9-56d17141ea5e"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="5cb8a47c-a09e-450d-9e79-665877c37091"
+                LastKnownName="EventHandler"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="fa9f415a-4762-495e-b6f7-cc4d5ef41189"
+            name="ExecutionOccurrenceSpecification22">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="b499d59e-854c-43a0-bf43-b1e3ad6421a5"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="5cb8a47c-a09e-450d-9e79-665877c37091"
+                LastKnownName="EventHandler"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="89453f16-7b86-4abc-9e11-af3b5f77b5ab"
+            name="ExecutionOccurrenceSpecification10">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="0777fcaf-21ac-4a28-8747-f42a96ddad44"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="e0c86295-4720-4767-a57b-2bea10322248"
+                LastKnownName="Job Manager"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="f62a9eb2-a359-4587-986e-c82fdfedc518"
+            name="ExecutionOccurrenceSpecification8">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="93680308-13d6-4713-a881-cc5dec5b1433"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="5cb8a47c-a09e-450d-9e79-665877c37091"
+                LastKnownName="EventHandler"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="74f6a4af-1427-496b-a044-471b8420bba4"
+            name="SharePointSync Service"
+            isActor="true"
+            lifelineDisplayName="SharePointSync Service">
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="17d466fe-be08-44c2-bdf7-97e46db700e1"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="1ebf01b1-a966-42ce-9d98-ad646e07d54c"
+            name="Job Manager"
+            isActor="false"
+            lifelineDisplayName="Job Manager">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="7414ebd7-fdfa-4c3d-9fe0-e6c1a5d8d9fc"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="b19cc816-3a63-4c7b-bfba-65eed7456d56"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="12499195-9da8-43a2-9d9c-35c2d13c759b"
+            name="Sync Manager"
+            isActor="false"
+            lifelineDisplayName="Sync Manager">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="5598ff70-ce22-434f-bbff-795e535f080f"
+                LastKnownName="ExecutionOccurrenceSpecification23"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="2a003378-6c3a-4780-b454-817cdd1234db"
+                LastKnownName="ExecutionOccurrenceSpecification24"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="d113695e-8b08-4c1e-9c4a-0215150f8121"
+            name="SyncServiceFileWatcher"
+            isActor="false"
+            lifelineDisplayName="SyncServiceFileWatcher">
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="e8e31054-32cd-4874-8d03-01d96d116477"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="fa26d5f4-ce79-4084-870a-05ddfdeebd3a"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="50b3bd5a-a696-4239-92ef-be62f40f84f5"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="cee1ea5a-2735-4bb9-8153-ebb191636f47"
+            name="Event Bus"
+            isActor="false"
+            lifelineDisplayName="Event Bus">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="4c99634d-1566-40d2-b910-48badaad6d66"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="2953246d-5e6a-4d1d-b0e8-7c8e4aaf018e"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="5cb8a47c-a09e-450d-9e79-665877c37091"
+            name="EventHandler"
+            isActor="false"
+            lifelineDisplayName="EventHandler">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="bd098fc8-9e9d-4b21-86cf-c57de64f5ebc"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="f62a9eb2-a359-4587-986e-c82fdfedc518"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="e0c86295-4720-4767-a57b-2bea10322248"
+            name="Job Manager"
+            isActor="false"
+            lifelineDisplayName="Job Manager">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="8524e268-1cb6-44ea-b06b-699fcde89d20"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="89453f16-7b86-4abc-9e11-af3b5f77b5ab"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="c88b90d0-3539-402b-a05f-85034082ecf6"
+            name="EnqueueSharepointSyncJob"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="17d466fe-be08-44c2-bdf7-97e46db700e1"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="9df59e53-4f2f-45c1-80e8-04c9e0d07b1d"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="c22e062b-cdf9-4cb9-89f4-4b7eeaef4075"
+            name="Download File"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="143a13f8-cec6-497b-af61-44e22ad5f3e7"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ee5610cf-464f-4281-a03b-cb40e5c5ae38"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="ace8457b-452b-455b-ac18-4b9aeaf4f9b2"
+            name="Monitor File Created Event"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e8e31054-32cd-4874-8d03-01d96d116477"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="5d5f53e0-aded-4f6d-885f-843df4c2a656"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="e903936d-22a8-46ac-b8f2-40a766be88d3"
+            name="Trigger FileDownloadedEventData"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d74415be-9613-468d-abd1-68027534f608"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="a01ea3db-a574-4c09-bca7-786a47e3df97"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="6ebc98ae-79eb-4f58-ac59-e68c00bdf846"
+            name="Send Event"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="3ec13182-0c4f-4560-b13e-08382494f527"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="464fe5e0-da96-47d5-914c-34b629ab38ec"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="c952950d-c2c9-4865-94f3-5875149a4a73"
+            name="Handle Event"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e5c3cf73-aa6f-4bd9-ad35-48a76697a4fc"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="35594ec2-5572-4231-9afc-6fc091f7f5f3"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="b57a785d-78d7-4d8a-90d7-3c4c10b5789f"
+            name="Enqueue AwsS3UploadJob"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="dd8df023-d180-4db5-acc9-56d17141ea5e"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="0891040b-e479-408c-8cbb-680d24ed0f66"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="e39ed14d-ca42-4d23-bc18-56b2d0281699"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="03c7a6ed-8e79-46b5-bb6e-8b854b9c1670"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="774b19d5-fca8-49cb-93bd-de2745e83013"
+        name="Trigger FileDownloadedEventData"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="28359d1a-0325-4f83-8551-e3f1b3437b79"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="53c0430e-31b0-4e97-9a74-df64d91a9873"
+                LastKnownName="SyncServiceFileWatcher"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="664d25da-1b60-4018-a240-11c85e0acfa5"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="2c1fec27-0b93-442e-a851-d07dadf80e64"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="6c545376-bc37-42a7-9dc0-1212f8605df4"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="2c1fec27-0b93-442e-a851-d07dadf80e64"
+            name="ExecutionOccurrenceSpecification3">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="21eaf4a8-dc1c-45b5-85ca-9a10190c0434"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="53c0430e-31b0-4e97-9a74-df64d91a9873"
+                LastKnownName="SyncServiceFileWatcher"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d759727b-9052-4c5b-a1af-7646d39e6f16"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="6fefd1a4-67a3-45dd-b20b-a8603ada2aa7"
+                LastKnownName="Job Manager"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6c545376-bc37-42a7-9dc0-1212f8605df4"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="53c0430e-31b0-4e97-9a74-df64d91a9873"
+                LastKnownName="SyncServiceFileWatcher"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="664d25da-1b60-4018-a240-11c85e0acfa5"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="1ca16a21-af0a-4eb4-b43e-0d2c8962f7d9"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="53c0430e-31b0-4e97-9a74-df64d91a9873"
+                LastKnownName="SyncServiceFileWatcher"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="6fefd1a4-67a3-45dd-b20b-a8603ada2aa7"
+            name="Job Manager"
+            isActor="false"
+            lifelineDisplayName="Job Manager">
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="d759727b-9052-4c5b-a1af-7646d39e6f16"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="53c0430e-31b0-4e97-9a74-df64d91a9873"
+            name="SyncServiceFileWatcher"
+            isActor="false"
+            lifelineDisplayName="SyncServiceFileWatcher">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="2c1fec27-0b93-442e-a851-d07dadf80e64"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="664d25da-1b60-4018-a240-11c85e0acfa5"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="61bf1dd4-431f-4670-94b5-41269db44567"
+            name="Trigger FileDownloadedEventData"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d759727b-9052-4c5b-a1af-7646d39e6f16"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6c545376-bc37-42a7-9dc0-1212f8605df4"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="SuperRocket.Orchard.Architecture.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="21eaf4a8-dc1c-45b5-85ca-9a10190c0434"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="1ca16a21-af0a-4eb4-b43e-0d2c8962f7d9"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="8e49b841-a003-46ba-aa07-899d1b48c64b"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="a2b0a644-98bc-4cb0-ae5f-8e9c00918f39"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="0f038dd0-640a-4c6b-ab3e-cc2f60d1a23b"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="6308b649-dddb-4a26-89b1-dccab65d4038"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="8c338129-b685-4638-a7ac-16a6413b9bf9"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="93680308-13d6-4713-a881-cc5dec5b1433"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="27da79c8-593d-490e-a7b5-a0fc868ae770"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="0777fcaf-21ac-4a28-8747-f42a96ddad44"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="33b3fd6c-dee4-4a9f-871d-1baf8bde5b9e"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="b499d59e-854c-43a0-bf43-b1e3ad6421a5"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="9213ec13-d9e0-43c5-b425-d91fe368d947"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="49aafc56-62ff-4dd5-a7f1-42e0962e6e24"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

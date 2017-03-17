@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="07877df0-21a7-4264-bc97-3fbf31a065ce" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="b3093396-39cf-46ac-a8ea-0637bba4ce83" name="Job Management UI&#xD;&#xA;">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="72007470-fb91-4fa6-81d2-4e9a591d303a" direction="Forward">
+          <layerMoniker Id="ec24e6db-e5e1-43fe-8e16-da92e34cf6a2" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="ec24e6db-e5e1-43fe-8e16-da92e34cf6a2" name=" Infrastructure&#xD;&#xA;">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="76b6aa61-5bcb-40eb-a04d-026a3d4aea06" direction="Forward">
+          <layerMoniker Id="2fce0ccc-f437-4025-984f-581513d97d93" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="f342cb1a-8a1c-4637-8827-cb7125c32e5f" name="Application Layer&#xD;&#xA;">
+          <childLayers>
+            <layer Id="515ee77c-f4ea-46a5-a215-69569c65667f" name="Hangfire Job Framework" />
+            <layer Id="e6be4bc3-abf5-4f14-936f-9b6cd462f72b" name="Background Sync Jobs" />
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="2fce0ccc-f437-4025-984f-581513d97d93" name="Asp.net MVC &amp; Module System &amp; Abp &amp; Domain Events&#xD;&#xA;">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="8ee96a9a-f99c-4290-be2f-3ffecb401c58" direction="Forward">
+          <layerMoniker Id="cde59e59-090d-42a7-bd15-82c5e67dc2a5" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="b0774e8e-08e3-4e39-bde3-fe2fdd7ff2cb" name="Core&#xD;&#xA;">
+          <childLayers>
+            <layer Id="87b4ba7c-7327-4c9b-a4b6-faaf0131828a" name="Sharepoint SDK Manager" />
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="f571db24-5048-4986-abb9-36317abd636d" name="Web Portal&#xD;&#xA;">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="a26e2911-ca5f-4504-b5b5-bd9a67a47edd" direction="Forward">
+          <layerMoniker Id="ec24e6db-e5e1-43fe-8e16-da92e34cf6a2" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="60aac7f6-7f73-4d75-9c38-5b197115d35d" name="Web Api">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="1813bd66-1fff-4e79-a1b8-9ff3e821d4c3" direction="Forward">
+          <layerMoniker Id="ec24e6db-e5e1-43fe-8e16-da92e34cf6a2" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="cde59e59-090d-42a7-bd15-82c5e67dc2a5" name="Database&#xD;&#xA;" />
+    <layer Id="be1567a6-f812-4740-beb2-aecc3fb3188e" name="Services&#xD;&#xA;" />
+  </layers>
+</layerModel>

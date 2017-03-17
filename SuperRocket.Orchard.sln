@@ -1,0 +1,96 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{DFA48E27-7D53-4955-A722-3D91A7119BE7}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperRocket.Orchard.Core", "SuperRocket.Orchard.Core\SuperRocket.Orchard.Core.csproj", "{17298EA0-AF73-4F30-B6F1-2066100D7D74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperRocket.Orchard.Application", "SuperRocket.Orchard.Application\SuperRocket.Orchard.Application.csproj", "{EDF5D964-4C0F-4F19-B674-58A38A5E5401}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperRocket.Orchard.EntityFramework", "SuperRocket.Orchard.EntityFramework\SuperRocket.Orchard.EntityFramework.csproj", "{3979F157-DEB0-4878-AB1D-4CEF6B5A1300}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperRocket.Orchard.WebApi", "SuperRocket.Orchard.WebApi\SuperRocket.Orchard.WebApi.csproj", "{5EB52D3D-09FD-463A-B02A-8D9856BD3724}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperRocket.Orchard.Web", "SuperRocket.Orchard.Web\SuperRocket.Orchard.Web.csproj", "{404A6D3B-AA85-4E4C-AEEE-1E5026D5F135}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{7E85C7E5-70BD-4C9D-B052-D95955F46609}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperRocket.Orchard.Tests", "Tests\SuperRocket.Orchard.Tests\SuperRocket.Orchard.Tests.csproj", "{C602C47E-F379-40A3-A146-4F19105B3491}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{7408541C-F99C-4197-B203-136115BD1CB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperRocket.Orchard.Migrator", "Tools\SuperRocket.Orchard.Migrator\SuperRocket.Orchard.Migrator.csproj", "{6F98C2F2-898A-421B-BE3D-68FE69EC0646}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{6B898F0C-F663-4FC2-9B20-0BE58815B9C1}"
+	ProjectSection(SolutionItems) = preProject
+		lib\Amba.dll = lib\Amba.dll
+		lib\Microsoft.IdentityModel.dll = lib\Microsoft.IdentityModel.dll
+		lib\Microsoft.SharePoint.Client.dll = lib\Microsoft.SharePoint.Client.dll
+		lib\Microsoft.SharePoint.Client.Runtime.dll = lib\Microsoft.SharePoint.Client.Runtime.dll
+	EndProjectSection
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "SuperRocket.Orchard.Architecture", "SuperRocket.Orchard.Architecture\SuperRocket.Orchard.Architecture.modelproj", "{1091A263-04F7-4BEC-8BFC-89B598798C27}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "architecture", "architecture", "{E4E58751-A509-47F6-A592-B38CA0F85DB7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F6F87142-7171-4AFB-94B0-77DF0E38820B}"
+	ProjectSection(SolutionItems) = preProject
+		1.png = 1.png
+		2.png = 2.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17298EA0-AF73-4F30-B6F1-2066100D7D74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17298EA0-AF73-4F30-B6F1-2066100D7D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17298EA0-AF73-4F30-B6F1-2066100D7D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17298EA0-AF73-4F30-B6F1-2066100D7D74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDF5D964-4C0F-4F19-B674-58A38A5E5401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDF5D964-4C0F-4F19-B674-58A38A5E5401}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDF5D964-4C0F-4F19-B674-58A38A5E5401}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDF5D964-4C0F-4F19-B674-58A38A5E5401}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3979F157-DEB0-4878-AB1D-4CEF6B5A1300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3979F157-DEB0-4878-AB1D-4CEF6B5A1300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3979F157-DEB0-4878-AB1D-4CEF6B5A1300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3979F157-DEB0-4878-AB1D-4CEF6B5A1300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EB52D3D-09FD-463A-B02A-8D9856BD3724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EB52D3D-09FD-463A-B02A-8D9856BD3724}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EB52D3D-09FD-463A-B02A-8D9856BD3724}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EB52D3D-09FD-463A-B02A-8D9856BD3724}.Release|Any CPU.Build.0 = Release|Any CPU
+		{404A6D3B-AA85-4E4C-AEEE-1E5026D5F135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{404A6D3B-AA85-4E4C-AEEE-1E5026D5F135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{404A6D3B-AA85-4E4C-AEEE-1E5026D5F135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{404A6D3B-AA85-4E4C-AEEE-1E5026D5F135}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C602C47E-F379-40A3-A146-4F19105B3491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C602C47E-F379-40A3-A146-4F19105B3491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C602C47E-F379-40A3-A146-4F19105B3491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C602C47E-F379-40A3-A146-4F19105B3491}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F98C2F2-898A-421B-BE3D-68FE69EC0646}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F98C2F2-898A-421B-BE3D-68FE69EC0646}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F98C2F2-898A-421B-BE3D-68FE69EC0646}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F98C2F2-898A-421B-BE3D-68FE69EC0646}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1091A263-04F7-4BEC-8BFC-89B598798C27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1091A263-04F7-4BEC-8BFC-89B598798C27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1091A263-04F7-4BEC-8BFC-89B598798C27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1091A263-04F7-4BEC-8BFC-89B598798C27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C602C47E-F379-40A3-A146-4F19105B3491} = {7E85C7E5-70BD-4C9D-B052-D95955F46609}
+		{6F98C2F2-898A-421B-BE3D-68FE69EC0646} = {7408541C-F99C-4197-B203-136115BD1CB9}
+		{1091A263-04F7-4BEC-8BFC-89B598798C27} = {E4E58751-A509-47F6-A592-B38CA0F85DB7}
+	EndGlobalSection
+EndGlobal

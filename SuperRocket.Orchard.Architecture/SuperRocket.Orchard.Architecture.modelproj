@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1091a263-04f7-4bec-8bfc-89b598798c27}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>SuperRocket.Orchard.Architecture</Name>
+    <RootNamespace>SuperRocket.Orchard.Architecture</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ItemGroup>
+    <Content Include="SharePointSync.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SharePointSync.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SharePointSync.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="Trigger FileDownloadedEventData.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Trigger FileDownloadedEventData.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Trigger FileDownloadedEventData.sequencediagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\SuperRocket.Orchard.Architecture.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="Architecture.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="Architecture.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Architecture.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="Architecture.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>Architecture.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+</Project>
