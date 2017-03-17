@@ -14,14 +14,20 @@ How to run it?
 8.	Setup your IIS to point to your site. Open it in browser: http://localhost:8083/ ,the default User is admin, Password is 123qwe. You should see below  
 9.	Open it in browser : http://localhost:8083/hangfire You should see below  
 10.	User Postman to enqueue an Sync job. URL :http://localhost:8083/api/services/app/sharePointSyncService/EnqueueSharepointSyncJob That is it! You can track all the jobs on Hangfire dashboard.
-Links
+### Links
 You may find document or develop guide information at:
-•	Introduction to ASP.NET Boilerplate
-•	ASP.NET Boilerplate is a starting point for new modern web applications using best practices and popular tools.
-•	ASP.NET Boilerplate Documentation
-•	Using ASP.NET Core, Entity Framework Core and ASP.NET Boilerplate to Create NLayered Web Application (Part I)
-•	Using ASP.NET Core, Entity Framework Core and ASP.NET Boilerplate to Create NLayered Web Application (Part II)
-•	A Multi-Tenant (SaaS) Application With ASP.NET MVC, Angularjs, EntityFramework and ASP.NET Boilerplate
-Contributors
-•	SmartFire
 
+  * [Introduction to ASP.NET Boilerplate](https://www.codeproject.com/Articles/768664/Introduction-to-ASP-NET-Boilerplate)
+  
+  * [ASP.NET Boilerplate is a starting point for new modern web applications using best practices and popular tools.](http://aspnetboilerplate.com/)
+  
+  * [ASP.NET Boilerplate Documentation](http://aspnetboilerplate.com/Pages/Documents)
+  
+  * [Using ASP.NET Core, Entity Framework Core and ASP.NET Boilerplate to Create NLayered Web Application (Part I)](https://www.codeproject.com/Articles/1115763/Using-ASP-NET-Core-Entity-Framework-Core-and-ASP-N)
+  
+  * [Using ASP.NET Core, Entity Framework Core and ASP.NET Boilerplate to Create NLayered Web Application (Part II)](https://www.codeproject.com/Articles/1117216/Using-ASP-NET-Core-Entity-Framework-Core-and-ASP)
+
+  * [A Multi-Tenant (SaaS) Application With ASP.NET MVC, Angularjs, EntityFramework and ASP.NET Boilerplate](https://www.codeproject.com/Articles/1043326/A-Multi-Tenant-SaaS-Application-With-ASP-NET-MVC-A)
+
+### Contributors
+  * [SmartFire](https://github.com/david0718)
