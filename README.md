@@ -58,5 +58,10 @@ You may find document or develop guide information at:
 
   * [A Multi-Tenant (SaaS) Application With ASP.NET MVC, Angularjs, EntityFramework and ASP.NET Boilerplate](https://www.codeproject.com/Articles/1043326/A-Multi-Tenant-SaaS-Application-With-ASP-NET-MVC-A)
 
+### Contact Me
+  * [QQ](1023080982)
+  * [Email](dystudio@qq.com)
+  * [SmartFire](https://github.com/david0718)
+
 ### Contributors
   * [SmartFire](https://github.com/david0718)
