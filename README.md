@@ -63,9 +63,9 @@ You may find document or develop guide information at:
   
   * Email : (dystudio@qq.com)
   
-  * Github : https://github.com/david0718
+  * Github: https://github.com/david0718
   
-  * 博客园 : http://www.cnblogs.com/david0718
+  * 博客园: http://www.cnblogs.com/david0718
     
 ### Contributors
   * [SmartFire](https://github.com/david0718)
